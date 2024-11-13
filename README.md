@@ -8,6 +8,6 @@ Project PIA는 유니티를 처음 배울 때부터 습득한 지식과 유용�
 총 7가지의 게임으로 구성돼 있으며 옆 그림과 같은 게임 진행 방식을 취하고 있습니다.</br>
 
 ## 2. 개발 환경
-Unity 2021.3.1f1 LTS
-C#
-Photon PUN2
+*Unity 2021.3.1f1 LTS
+*C#
+*Photon PUN2
