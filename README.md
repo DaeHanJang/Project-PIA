@@ -1,6 +1,6 @@
 # Project PIA
 
-Web. [https://daehanjang.github.io/PIWeb/games.html](https://daehanjang.github.io/PIWeb/)</br>
+Web. [[https://daehanjang.github.io/PIWeb/games.html](https://daehanjang.github.io/PIWeb/)](https://daehanjang.github.io/PIWeb/games.html)</br>
 Notion. [https://github.com/DaeHanJang/Project-PIA](https://kind-rest-e61.notion.site/Project-PIA-1373af988a6880d7a0acc7a52ea3cd37?pvs=4)</br>
 
 ## 개요
