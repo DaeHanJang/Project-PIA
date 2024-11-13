@@ -1,6 +1,6 @@
 # Project PIA
 
-[![Video Label](http://img.youtube.com/vi/jmLlG9ga9So/0.jpg)](https://youtu.be/jmLlG9ga9So)
+[![Video Label](http://img.youtube.com/vi/jmLlG9ga9So/0.jpg)](https://youtu.be/jmLlG9ga9So)</br>
 플레이 영상</br>
 
 ## 1. 개요
