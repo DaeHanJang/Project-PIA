@@ -27,12 +27,12 @@ public class CameraTransform : MonoBehaviour {
         Vector3 posPlayer2 = player2.transform.position; posPlayer2.y = 1; //player2 position
         position = (posPlayer1 + posPlayer2) / 2; //player1, player2 middle position
 
-        Vector3 vecPlayerToMiddle = posPlayer1 - position; //middle position -> player1 position vector
+        Vector3 vecMiddleToPlayer = posPlayer1 - position; //middle position -> player1 position vector
         Vector3 vecMiddleToCam = cam.transform.position - position; //middle position -> camera position vector
 
         //vecPlayerToMiddle를 기준으로 vecMiddleToCam의 각도를 계산
         //Vector3.up은 왼손법칙의 엄지손가락에 해당함
-        float angle = Vector3.SignedAngle(vecMiddleToCam, vecPlayerToMiddle, Vector3.up);
+        float angle = Vector3.SignedAngle(vecMiddleToCam, vecMiddleToPlayer, Vector3.up);
 
         if (0 <= angle && angle <= 90) {
             angle -= 90;

@@ -14,7 +14,7 @@ public class LobbyManager : NetworkSceneManager<LobbyManager> {
 
     protected override void Awake() {
         base.Awake();
-        SetNetworkScreenTransitionEffect("Fade", "Canvase");
+        SetScreenTransitionEffect("NetworkFade", "Canvas");
 
         fileds[0] = Resources.Load("PIFight/Fields/Square") as GameObject;
         fileds[1] = Resources.Load("PIFight/Fileds/Circle") as GameObject;
@@ -33,7 +33,7 @@ public class LobbyManager : NetworkSceneManager<LobbyManager> {
     }
 
     private void Start() {
-        Instantiate(fileds[Random.Range(0, fileds.Length)], Vector3.zero, Quaternion.identity);
+        Instantiate(fileds[0], Vector3.zero, Quaternion.identity);
         if (PhotonNetwork.InRoom) PhotonNetwork.LeaveRoom();
     }
 
@@ -282,21 +282,24 @@ public class LobbyManager : NetworkSceneManager<LobbyManager> {
         Debug.Log("Impossible Room Name...");
     }
 
-    public override void GameStart() { LoadScene(10); }
+    public override void GameStart() {
+        photonView.RPC("NetworkLoadScene", RpcTarget.All, 10);
+    }
 
     public override void GameOver() { }
 
     public override void LoadScene(int sceneIdx) {
         base.LoadScene(sceneIdx);
 
-        screenTransitionEffect.GetComponent<ScreenTransitionEffect>().sceneIdx = 10;
-        screenTransitionEffect.GetComponent<ScreenTransitionEffect>().EndEffectFirst();
+        screenTransitionEffect.GetComponent<NetworkScreenTransitionEffect>().sceneIdx = sceneIdx;
+        screenTransitionEffect.GetComponent<NetworkScreenTransitionEffect>().EndEffectFirst();
     }
 
-    public override void LoadScene(string sceneName) {
-        base.LoadScene(sceneName);
+    [PunRPC]
+    public override void NetworkLoadScene(int sceneIdx) {
+        base.NetworkLoadScene(sceneIdx);
 
-        screenTransitionEffect.GetComponent<ScreenTransitionEffect>().sceneIdx = 10;
-        screenTransitionEffect.GetComponent<ScreenTransitionEffect>().EndEffectFirst();
+        screenTransitionEffect.GetComponent<NetworkScreenTransitionEffect>().sceneIdx = sceneIdx;
+        screenTransitionEffect.GetComponent<NetworkScreenTransitionEffect>().EndEffectFirst();
     }
 }

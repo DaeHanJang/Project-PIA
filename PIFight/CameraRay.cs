@@ -10,8 +10,6 @@ public class CameraRay : MonoBehaviour {
 
     void Update() {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 10f))
-            hit.transform.gameObject.layer = 7;
-            //hit.transform.gameObject.GetPhotonView().RPC("SetHide", RpcTarget.All, true);
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 10f)) hit.transform.gameObject.layer = 7;
     }
 }

@@ -144,14 +144,7 @@ public class PIFightManager : NetworkSceneManager<PIFightManager> {
     public override void LoadScene(int sceneIdx) {
         base.LoadScene(sceneIdx);
 
-        screenTransitionEffect.GetComponent<ScreenTransitionEffect>().sceneIdx = 2;
-        screenTransitionEffect.GetComponent<ScreenTransitionEffect>().EndEffectFirst();
-    }
-
-    public override void LoadScene(string sceneName) {
-        base.LoadScene(sceneName);
-
-        screenTransitionEffect.GetComponent<ScreenTransitionEffect>().sceneIdx = 2;
-        screenTransitionEffect.GetComponent<ScreenTransitionEffect>().EndEffectFirst();
+        screenTransitionEffect.GetComponent<NetworkScreenTransitionEffect>().sceneIdx = 2;
+        screenTransitionEffect.GetComponent<NetworkScreenTransitionEffect>().EndEffectFirst();
     }
 }

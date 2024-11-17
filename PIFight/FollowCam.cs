@@ -18,10 +18,6 @@ public class FollowCam : MonoBehaviour {
         vecPre = player1.transform.position - player2.transform.position;
     }
 
-    private void Update() {
-        
-    }
-
     private void LateUpdate() {
         posCurMiddle = MiddleCoordinates(player1.transform.position.x, 1, player1.transform.position.z,
             player2.transform.position.x, 1, player2.transform.position.z);
