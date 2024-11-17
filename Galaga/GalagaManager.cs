@@ -55,6 +55,7 @@ public class GalagaManager : SceneManager<GalagaManager> {
 
     protected override void Awake() {
         base.Awake();
+        Application.targetFrameRate = 60;
         SetScreenTransitionEffect("Fade", "Canvas");
 
         prePlayer = Resources.Load("Galaga/Player") as GameObject;

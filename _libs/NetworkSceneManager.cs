@@ -8,6 +8,7 @@ public abstract class NetworkSceneManager<T> : MonoBehaviourPunCallbacks where T
     private static T inst = null;
 
     protected GameObject screenTransitionEffect = null;
+    protected GameObject networkscreenTransitionEffect = null;
 
     public static T Inst { get { return inst; } }
 
@@ -67,9 +68,19 @@ public abstract class NetworkSceneManager<T> : MonoBehaviourPunCallbacks where T
 
     //Load scene
     public virtual void LoadScene(int sceneIdx) {
-        if (!screenTransitionEffect) PhotonNetwork.LoadLevel(sceneIdx);
+        if (!screenTransitionEffect) SceneManager.LoadScene(sceneIdx);
     }
     public virtual void LoadScene(string sceneName) {
+        if (!screenTransitionEffect) SceneManager.LoadScene(sceneName);
+    }
+
+    //Load scene(Network version)
+    [PunRPC]
+    public virtual void NetworkLoadScene(int sceneIdx) {
+        if (!screenTransitionEffect) PhotonNetwork.LoadLevel(sceneIdx);
+    }
+    [PunRPC]
+    public virtual void NetworkLoadScene(string sceneName) {
         if (!screenTransitionEffect) PhotonNetwork.LoadLevel(sceneName);
     }
 

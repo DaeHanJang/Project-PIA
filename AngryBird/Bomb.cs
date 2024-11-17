@@ -41,7 +41,7 @@ public class Bomb : MonoBehaviour {
         }
 
         if (sj != null) {
-            if (_prev_velocity.sqrMagnitude > rb.velocity.sqrMagnitude) { //함 프레임 앞 속력이 현제 속력보다 클경우 즉, spring joint를 통해 중앙 지점을 지나 감속할 경우
+            if (_prev_velocity.sqrMagnitude > rb.velocity.sqrMagnitude) { //한 프레임 앞 속력이 현 속력보다 클 경우 즉, spring joint를 통해 중앙 지점을 지나 감속할 경우
                 Destroy(sj);
                 DeleteLine();
                 rb.velocity = _prev_velocity;

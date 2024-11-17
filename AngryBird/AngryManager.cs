@@ -122,6 +122,7 @@ public class AngryManager : SceneManager<AngryManager> {
         MakePlank();
         GameObject.Find("Main Camera").SendMessage("GameReady");
     }
+
     public override void LoadScene(int sceneIdx) {
         base.LoadScene(sceneIdx);
 
