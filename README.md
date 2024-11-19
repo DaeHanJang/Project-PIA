@@ -14,5 +14,5 @@ Project PIA는 유니티를 처음 학습하면서 습득한 지식과 게임 �
 - Photon PUN2
 
 ## 3. 기술문서
-- Web. https://daehanjang.github.io/PIWeb/games.html</br>
 - Notion. https://kind-rest-e61.notion.site/Project-PIA-1373af988a6880d7a0acc7a52ea3cd37?pvs=4</br>
+- Web. https://daehanjang.github.io/PIWeb/games.html</br>
