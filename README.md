@@ -8,6 +8,7 @@ Project PIA는 유니티를 처음 학습하면서 습득한 지식과 게임 �
 총 7가지의 게임으로 구성돼 있으며 그림과 같은 흐름을 갖고 있습니다.</br>
 - Web. https://daehanjang.github.io/PIWeb/games.html</br>
 - Notion. https://kind-rest-e61.notion.site/Project-PIA-1373af988a6880d7a0acc7a52ea3cd37?pvs=4</br>
+![projectPIA_Scene drawio](https://github.com/user-attachments/assets/88532196-12b7-40c3-8b8a-b9a31f6267bb)
 
 ## 2. 개발 환경
 - Unity 2021.3.1f1 LTS
